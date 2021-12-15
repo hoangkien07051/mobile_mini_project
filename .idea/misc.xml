@@ -21,6 +21,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_alamat.xml" value="0.165" />
         <entry key="app/src/main/res/layout/fragment_diri.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_review_data.xml" value="0.1296875" />
         <entry key="app/src/main/res/layout/simple_spinner_item.xml" value="0.1296875" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1609375" />
       </map>

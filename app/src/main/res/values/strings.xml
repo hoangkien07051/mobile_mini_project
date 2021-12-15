@@ -14,4 +14,5 @@
     <string name="no">No</string>
     <string name="province">Province</string>
     <string name="network_error">Network Error</string>
+    <string name="review_data">Review Data</string>
 </resources>

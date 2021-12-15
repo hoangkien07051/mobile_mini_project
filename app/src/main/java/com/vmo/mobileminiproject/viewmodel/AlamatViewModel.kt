@@ -11,7 +11,37 @@ import javax.inject.Inject
 
 @SuppressLint("StaticFieldLeak")
 class AlamatViewModel(): ViewModel()  {
+
+    var isDomicileAddress = MutableLiveData(false)
+    var isHousingType = MutableLiveData(false)
+    var isNo = MutableLiveData(false)
+    var isProvince = MutableLiveData(false)
+
     var liveDataMerger = MediatorLiveData<Boolean>()
+
+    init {
+        liveDataMerger.apply {
+            addSource(isDomicileAddress) {
+                liveDataMerger.value = enableSave()
+            }
+            addSource(isHousingType) {
+                liveDataMerger.value = enableSave()
+            }
+            addSource(isNo) {
+                liveDataMerger.value = enableSave()
+            }
+            addSource(isProvince) {
+                liveDataMerger.value = enableSave()
+            }
+        }
+    }
+
+    private fun enableSave(): Boolean {
+        return isDomicileAddress.value == true &&
+                isHousingType.value == true &&
+                isNo.value == true &&
+                isProvince.value == true
+    }
 
     fun requestProvince(url: String) = liveData(viewModelScope.coroutineContext + Dispatchers.IO) {
         emit(Resource.loading(data = null))

@@ -12,6 +12,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import com.vmo.mobileminiproject.R
+import com.vmo.mobileminiproject.model.DiriData
 import com.vmo.mobileminiproject.model.EnumEducation
 import com.vmo.mobileminiproject.navigator.Navigator
 import com.vmo.mobileminiproject.utils.Constants
@@ -111,7 +112,13 @@ class DataDiriFragment : Fragment(R.layout.fragment_diri) {
         })
 
         btnSave.setOnClickListener {
-            Navigator.addFragment(this, R.id.nav_host_fragment, AlamatKTPFragment())
+            val diriData = DiriData()
+            diriData.nationalId = national_id.text.toString().trim()
+            diriData.fullName = fullname.text.toString().trim()
+            diriData.bankAccountNo = bank_account_no.text.toString().trim()
+            diriData.education = spEducation.selectedItem.toString().trim()
+            diriData.dateOfBirth = tvTime.text.toString().trim()
+            Navigator.addFragment(this, R.id.nav_host_fragment, AlamatKTPFragment.newInstance(diriData))
         }
     }
 

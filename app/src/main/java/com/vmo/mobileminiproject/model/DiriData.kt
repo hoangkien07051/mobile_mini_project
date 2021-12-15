@@ -1,13 +1,24 @@
 package com.vmo.mobileminiproject.model
 
-data class DiriData(
+import android.annotation.SuppressLint
+import android.os.Parcel
+import android.os.Parcelable
+import kotlinx.android.parcel.Parcelize
+
+@SuppressLint("ParcelCreator")
+@Parcelize
+data class DiriData (
     var nationalId: String,
     var fullName: String,
     var bankAccountNo: String,
     var education: String,
     var dateOfBirth: String,
-) {
-    fun isValidNationalId() : Boolean {
-        return false
-    }
+    var domicileAddress: String,
+    var housingType: String,
+    var no: String,
+    var province: String,
+) : Parcelable {
+    constructor(): this("","","","","","","","","",)
+
+
 }

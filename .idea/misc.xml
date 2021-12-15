@@ -3,8 +3,20 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable-v24/bg_btn_default.xml" value="0.1609375" />
+        <entry key="app/src/main/res/drawable-v24/bg_edit_login_default.xml" value="0.21481481481481482" />
+        <entry key="app/src/main/res/drawable-v24/bg_edit_login_forcus.xml" value="0.21481481481481482" />
+        <entry key="app/src/main/res/drawable-v24/selector_edittext.xml" value="0.21481481481481482" />
+        <entry key="app/src/main/res/drawable/bg_edit_login_default.xml" value="0.17685185185185184" />
+        <entry key="app/src/main/res/drawable/bg_edit_login_forcus.xml" value="0.17685185185185184" />
+        <entry key="app/src/main/res/drawable/bg_input_focus.xml" value="0.2916666666666667" />
+        <entry key="app/src/main/res/drawable/ic_bx_calendar.xml" value="0.1609375" />
+        <entry key="app/src/main/res/drawable/ic_dropdown_arrow.xml" value="0.1609375" />
+        <entry key="app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1609375" />
+        <entry key="app/src/main/res/drawable/selector_edittext.xml" value="0.17685185185185184" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/fragment_diri.xml" value="0.12916666666666668" />
+        <entry key="app/src/main/res/layout/fragment_diri.xml" value="0.25" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1609375" />
       </map>
     </option>
   </component>

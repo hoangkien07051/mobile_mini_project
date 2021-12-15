@@ -1,4 +1,11 @@
 <resources>
     <string name="app_name">MobileMiniProject</string>
     <string name="data_diri">Data Diri</string>
+    <string name="national_id">National ID</string>
+    <string name="fullname">Fullname</string>
+    <string name="bank_account_no">Bank Account No</string>
+    <string name="education">Education</string>
+    <string name="date_of_birth">Date Of Birth</string>
+    <string name="please_select">Please Select</string>
+    <string name="save">Save</string>
 </resources>

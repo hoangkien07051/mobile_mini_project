@@ -68,7 +68,7 @@ class DataDiriFragment : Fragment(R.layout.fragment_diri) {
         fullname.doAfterTextChanged {
             diriViewModel.isFullname.postValue(it.toString().trim().isNotEmpty())
         }
-        bank_account_no_name.doAfterTextChanged {
+        bank_account_no.doAfterTextChanged {
             val count = it.toString().trim().length
             if(count <= 8) {
                 diriViewModel.isBankAccountNo.postValue(false)

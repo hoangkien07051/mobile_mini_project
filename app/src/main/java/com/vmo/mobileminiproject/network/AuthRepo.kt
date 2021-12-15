@@ -1,4 +1,4 @@
-package com.vmo.mobileminiproject
+package com.vmo.mobileminiproject.network
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

@@ -2,8 +2,8 @@ package com.vmo.mobileminiproject.viewmodel
 
 import android.annotation.SuppressLint
 import androidx.lifecycle.*
-import com.vmo.mobileminiproject.AuthRepo
-import com.vmo.mobileminiproject.RetrofitBuilder
+import com.vmo.mobileminiproject.network.AuthRepo
+import com.vmo.mobileminiproject.network.RetrofitBuilder
 import com.vmo.mobileminiproject.utils.Resource
 import kotlinx.coroutines.Dispatchers
 

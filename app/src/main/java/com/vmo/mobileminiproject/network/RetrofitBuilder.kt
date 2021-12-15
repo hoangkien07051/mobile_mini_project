@@ -1,4 +1,4 @@
-package com.vmo.mobileminiproject
+package com.vmo.mobileminiproject.network
 
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

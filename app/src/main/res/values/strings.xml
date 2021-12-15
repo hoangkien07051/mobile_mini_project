@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MobileMiniProject</string>
+    <string name="data_diri">Data Diri</string>
 </resources>

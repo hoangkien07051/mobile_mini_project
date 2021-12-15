@@ -105,6 +105,11 @@ class AlamatKTPFragment : Fragment(R.layout.fragment_alamat) {
             arguments?.let {
                 diriData = it.getParcelable(DIRI_DATA)
             }
+            if(diriData == null) return@setOnClickListener
+            diriData!!.domicileAddress = domicile_address.text.toString().trim()
+            diriData!!.housingType = spHousingType.selectedItem.toString().trim()
+            diriData!!.no = no.text.toString().trim()
+            diriData!!.province = spProvince.selectedItem.toString().trim()
             if(diriData != null) {
                 Navigator.addFragment(this, R.id.nav_host_fragment, ReviewDataPageFragment.newInstance(
                     diriData!!

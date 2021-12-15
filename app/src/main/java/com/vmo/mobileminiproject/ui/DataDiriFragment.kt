@@ -9,7 +9,6 @@ import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import com.vmo.mobileminiproject.R
 import com.vmo.mobileminiproject.model.DiriData
@@ -22,7 +21,6 @@ import com.vmo.mobileminiproject.utils.toDefaultDateString
 import com.vmo.mobileminiproject.viewmodel.DiriViewModel
 import kotlinx.android.synthetic.main.fragment_diri.*
 import java.util.*
-import javax.inject.Inject
 
 
 class DataDiriFragment : Fragment(R.layout.fragment_diri) {

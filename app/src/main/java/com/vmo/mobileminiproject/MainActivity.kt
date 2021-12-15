@@ -1,8 +1,8 @@
 package com.vmo.mobileminiproject
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import com.vmo.mobileminiproject.navigator.Navigator
 import com.vmo.mobileminiproject.ui.DataDiriFragment
 import kotlinx.android.synthetic.main.activity_main.*

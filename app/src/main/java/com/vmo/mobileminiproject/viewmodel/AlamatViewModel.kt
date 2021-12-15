@@ -1,13 +1,11 @@
 package com.vmo.mobileminiproject.viewmodel
 
 import android.annotation.SuppressLint
-import android.content.Context
 import androidx.lifecycle.*
 import com.vmo.mobileminiproject.AuthRepo
 import com.vmo.mobileminiproject.RetrofitBuilder
 import com.vmo.mobileminiproject.utils.Resource
 import kotlinx.coroutines.Dispatchers
-import javax.inject.Inject
 
 @SuppressLint("StaticFieldLeak")
 class AlamatViewModel(): ViewModel()  {

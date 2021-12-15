@@ -36,4 +36,202 @@
         app:tint="@color/white"
         android:contentDescription="@string/app_name" />
 
+    <TextView
+        android:id="@+id/national_id_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="32dp"
+        android:textColor="@color/general"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/title_actionbar"
+        android:text="@string/national_id"/>
+
+    <TextView
+        android:id="@+id/national_id_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/general"
+        app:layout_constraintTop_toBottomOf="@+id/title_actionbar"
+        android:text="@string/national_id"/>
+
+    <TextView
+        android:id="@+id/fullname_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:textColor="@color/general"
+        app:layout_constraintTop_toBottomOf="@+id/national_id_name"
+        android:text="@string/fullname"/>
+
+    <TextView
+        android:id="@+id/fullname_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/general"
+        app:layout_constraintTop_toBottomOf="@+id/national_id_name"
+        android:text="@string/fullname"/>
+
+    <TextView
+        android:id="@+id/bank_account_no_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/general"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/fullname_name"
+        android:text="@string/bank_account_no"/>
+
+    <TextView
+        android:id="@+id/bank_account_no_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/general"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/fullname_name"
+        android:text="@string/bank_account_no"/>
+
+    <TextView
+        android:id="@+id/education_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/general"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/bank_account_no_name"
+        android:text="@string/education"/>
+
+    <TextView
+        android:id="@+id/education_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:textColor="@color/general"
+        app:layout_constraintTop_toBottomOf="@+id/bank_account_no_name"
+        android:text="@string/education"/>
+
+    <TextView
+        android:id="@+id/date_of_birth_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/general"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/education_name"
+        android:text="@string/education"/>
+
+    <TextView
+        android:id="@+id/date_of_birth_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/general"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/education_name"
+        android:text="@string/education"/>
+
+    <TextView
+        android:id="@+id/domicile_address_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/general"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/date_of_birth_name"
+        android:text="@string/domicile_address"/>
+
+    <TextView
+        android:id="@+id/domicile_address_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/general"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/date_of_birth_name"
+        android:text="@string/domicile_address"/>
+
+    <TextView
+        android:id="@+id/housing_type_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/general"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/domicile_address_name"
+        android:text="@string/housing_type"/>
+
+    <TextView
+        android:id="@+id/housing_type_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/general"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/domicile_address_name"
+        android:text="@string/housing_type"/>
+
+    <TextView
+        android:id="@+id/no_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/general"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/housing_type_name"
+        android:text="@string/no"/>
+
+    <TextView
+        android:id="@+id/no_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/general"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/housing_type_name"
+        android:text="@string/no"/>
+
+    <TextView
+        android:id="@+id/province_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/general"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/no_name"
+        android:text="@string/province"/>
+
+    <TextView
+        android:id="@+id/province_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/general"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/no_name"
+        android:text="@string/province"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

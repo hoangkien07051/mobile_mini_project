@@ -1,13 +1,7 @@
 package com.vmo.mobileminiproject.utils
 
-import android.app.AlertDialog
 import android.content.Context
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
-import android.view.LayoutInflater
-import android.view.Window
 import android.widget.Toast
-import androidx.appcompat.view.ContextThemeWrapper
 import com.vmo.mobileminiproject.R
 
 class NetworkUtil {

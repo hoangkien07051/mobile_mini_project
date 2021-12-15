@@ -29,6 +29,10 @@ object Navigator {
 
     fun backFragment(context: AppCompatActivity) {
         val fragmentManager: FragmentManager = context.supportFragmentManager
-        fragmentManager.popBackStack()
+        if(fragmentManager.backStackEntryCount > 1) {
+            fragmentManager.popBackStack()
+        } else {
+            context.finish()
+        }
     }
 }

@@ -11,4 +11,5 @@
     <color name="primary">#039D8A</color>
     <color name="general">#333333</color>
     <color name="btn_disabled">#C5C8CB</color>
+    <color name="bg_screen">#FCFCFC</color>
 </resources>

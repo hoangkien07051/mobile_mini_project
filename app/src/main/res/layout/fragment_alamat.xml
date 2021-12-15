@@ -3,10 +3,10 @@
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.DataDiriFragment"
     android:clickable="true"
     android:focusable="true"
     android:background="@color/bg_screen"
+    tools:context=".ui.AlamatKTPFragment"
     android:layout_height="match_parent">
 
     <TextView
@@ -20,7 +20,7 @@
         android:gravity="center"
         android:paddingLeft="32dp"
         android:paddingRight="32dp"
-        android:text="@string/data_diri"
+        android:text="@string/alamat_ktp"
         android:textColor="@color/white"
         android:textSize="18sp" />
 
@@ -37,89 +37,30 @@
         android:contentDescription="@string/app_name" />
 
     <TextView
-        android:id="@+id/national_id_name"
+        android:id="@+id/domicile_address_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/title_actionbar"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="32dp"
-        app:layout_constraintTop_toBottomOf="@+id/title_actionbar"
         android:textColor="@color/general"
-        android:text="@string/national_id"
-        android:layout_marginStart="16dp"/>
+        android:layout_marginStart="16dp"
+        android:text="@string/domicile_address"/>
 
     <EditText
-        android:id="@+id/national_id"
+        android:id="@+id/domicile_address"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:background="@drawable/selector_edittext"
         android:ems="10"
         android:textColor="@color/general"
-        android:layout_marginHorizontal="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/national_id_name"
-        android:gravity="top|start"
-        android:maxLength="16"
-        android:inputType="number"
-        android:padding="10dp"
-        android:textSize="16sp"
-        android:autofillHints="@string/national_id"
-        tools:ignore="LabelFor" />
-
-    <TextView
-        android:id="@+id/fullname_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/national_id"
-        android:layout_marginTop="16dp"
-        android:textColor="@color/general"
-        android:text="@string/fullname"
-        android:layout_marginStart="16dp"/>
-
-    <EditText
-        android:id="@+id/fullname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/general"
-        android:background="@drawable/selector_edittext"
-        android:ems="10"
         android:digits="ABCDEFGHJIKMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
         android:layout_marginHorizontal="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fullname_name"
+        app:layout_constraintTop_toBottomOf="@+id/domicile_address_name"
         android:gravity="top|start"
-        android:maxLength="10"
-        android:inputType="text"
-        android:padding="10dp"
-        android:textSize="16sp"
-        android:autofillHints="@string/national_id"
-        tools:ignore="LabelFor" />
-
-    <TextView
-        android:id="@+id/bank_account_no_name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/general"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fullname"
-        android:layout_marginTop="16dp"
-        android:text="@string/bank_account_no"
-        android:layout_marginStart="16dp"/>
-
-    <EditText
-        android:id="@+id/bank_account_no"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/general"
-        android:background="@drawable/selector_edittext"
-        android:ems="10"
-        android:layout_marginHorizontal="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bank_account_no_name"
-        android:gravity="top|start"
+        android:maxLength="100"
         android:inputType="number"
         android:padding="10dp"
         android:textSize="16sp"
@@ -127,18 +68,18 @@
         tools:ignore="LabelFor" />
 
     <TextView
-        android:id="@+id/education_name"
+        android:id="@+id/housing_type_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/general"
+        app:layout_constraintTop_toBottomOf="@+id/domicile_address"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/bank_account_no"
         android:layout_marginTop="16dp"
-        android:text="@string/education"
-        android:layout_marginStart="16dp"/>
+        android:textColor="@color/general"
+        android:layout_marginStart="16dp"
+        android:text="@string/housing_type"/>
 
     <RelativeLayout
-        android:id="@+id/education"
+        android:id="@+id/housing_type"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
@@ -146,10 +87,10 @@
         android:layout_marginHorizontal="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/education_name">
+        app:layout_constraintTop_toBottomOf="@+id/housing_type_name">
 
         <Spinner
-            android:id="@+id/spEducation"
+            android:id="@+id/spHousingType"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@null"
@@ -168,49 +109,72 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/date_of_birth_name"
+        android:id="@+id/no_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/housing_type"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/education"
         android:layout_marginTop="16dp"
         android:textColor="@color/general"
-        android:text="@string/date_of_birth"
-        android:layout_marginStart="16dp"/>
+        android:layout_marginStart="16dp"
+        android:text="@string/no"/>
+
+    <EditText
+        android:id="@+id/no"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/selector_edittext"
+        android:ems="10"
+        android:textColor="@color/general"
+        android:layout_marginHorizontal="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/no_name"
+        android:gravity="top|start"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:autofillHints="@string/national_id"
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/province_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/no"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/general"
+        android:layout_marginStart="16dp"
+        android:text="@string/housing_type"/>
 
     <RelativeLayout
-        android:id="@+id/date_of_birth"
+        android:id="@+id/province"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_marginTop="8dp"
-        android:layout_marginHorizontal="16dp"
         android:background="@drawable/selector_edittext"
-        android:clickable="true"
-        android:focusable="true"
+        android:layout_marginHorizontal="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date_of_birth_name">
+        app:layout_constraintTop_toBottomOf="@+id/province_name">
 
-        <TextView
-            android:id="@+id/tvTime"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toStartOf="@+id/show_pass_btn"
-            android:background="@android:color/transparent"
-            android:lines="1"
-            android:textColor="@color/general"
-            android:paddingHorizontal="16dp"
-            android:text="@string/please_select" />
+        <Spinner
+            android:id="@+id/spProvince"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@null"
+            android:minHeight="0dp"
+            android:textSize="16sp" />
 
         <ImageView
-            android:id="@+id/show_pass_btn"
+            android:id="@+id/arrow_down_province"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_centerVertical="true"
             android:layout_marginEnd="16dp"
-            android:src="@drawable/ic_bx_calendar"
+            android:src="@drawable/ic_dropdown_arrow"
             android:contentDescription="@string/app_name" />
     </RelativeLayout>
 
@@ -229,6 +193,6 @@
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/date_of_birth" />
+        app:layout_constraintTop_toBottomOf="@+id/province" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

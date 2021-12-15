@@ -8,4 +8,8 @@
     <string name="date_of_birth">Date Of Birth</string>
     <string name="please_select">Please Select</string>
     <string name="save">Save</string>
+    <string name="alamat_ktp">Alamat KTP</string>
+    <string name="domicile_address">Domicile Address</string>
+    <string name="housing_type">Housing Type</string>
+    <string name="no">No</string>
 </resources>

@@ -5,17 +5,24 @@ import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.activity.OnBackPressedCallback
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProvider
 import com.vmo.mobileminiproject.R
 import com.vmo.mobileminiproject.model.EnumEducation
+import com.vmo.mobileminiproject.navigator.Navigator
 import com.vmo.mobileminiproject.utils.Constants
 import com.vmo.mobileminiproject.utils.Utils
+import com.vmo.mobileminiproject.utils.hideKeyboard
 import com.vmo.mobileminiproject.utils.toDefaultDateString
 import com.vmo.mobileminiproject.viewmodel.DiriViewModel
+import kotlinx.android.synthetic.main.fragment_alamat.*
 import kotlinx.android.synthetic.main.fragment_diri.*
+import kotlinx.android.synthetic.main.fragment_diri.btnSave
+import kotlinx.android.synthetic.main.fragment_diri.icon_back
 import java.util.*
 import javax.inject.Inject
 
@@ -29,6 +36,18 @@ class DataDiriFragment : Fragment(R.layout.fragment_diri) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val onBackPressedCallback = object : OnBackPressedCallback(true) {
+            override fun handleOnBackPressed() {
+                Navigator.backFragment(context as AppCompatActivity)
+                view.hideKeyboard()
+            }
+        }
+        requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, onBackPressedCallback)
+        icon_back.setOnClickListener {
+            activity?.onBackPressed()
+            view.hideKeyboard()
+        }
 
         Utils.setHtmlTextview(national_id_name, "${getString(R.string.national_id)} ${Constants.htmlPropRequired}")
         Utils.setHtmlTextview(bank_account_no_name, "${getString(R.string.bank_account_no)} ${Constants.htmlPropRequired}")
@@ -44,7 +63,11 @@ class DataDiriFragment : Fragment(R.layout.fragment_diri) {
 
     private fun handleViewListener() {
         national_id.doAfterTextChanged {
-            diriViewModel.isNationalId.postValue(it.toString().trim().isNotEmpty())
+            if(it.toString().trim().length == 16) {
+                diriViewModel.isNationalId.postValue(true)
+            } else {
+                diriViewModel.isNationalId.postValue(false)
+            }
         }
         fullname.doAfterTextChanged {
             diriViewModel.isFullname.postValue(it.toString().trim().isNotEmpty())
@@ -60,6 +83,7 @@ class DataDiriFragment : Fragment(R.layout.fragment_diri) {
 
         spEducation.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
             override fun onItemSelected(p0: AdapterView<*>?, p1: View?, p2: Int, p3: Long) {
+                view?.hideKeyboard()
                 diriViewModel.isEducation.postValue(true)
             }
             override fun onNothingSelected(p0: AdapterView<*>?) {}
@@ -76,6 +100,7 @@ class DataDiriFragment : Fragment(R.layout.fragment_diri) {
             view
         }
         date_of_birth.setOnClickListener {
+            view?.hideKeyboard()
             calendarBirthDay?.let {
                 val picker = DatePickerDialog(requireContext(), date, calendarBirthDay.get(Calendar.YEAR),
                     calendarBirthDay.get(Calendar.MONTH), calendarBirthDay[Calendar.DATE])
@@ -87,6 +112,10 @@ class DataDiriFragment : Fragment(R.layout.fragment_diri) {
         diriViewModel.liveDataMerger.observe(viewLifecycleOwner, {
             btnSave.isEnabled = it
         })
+
+        btnSave.setOnClickListener {
+            Navigator.addFragment(this, R.id.nav_host_fragment, AlamatKTPFragment())
+        }
     }
 
 

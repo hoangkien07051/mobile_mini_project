@@ -63,6 +63,7 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/selector_edittext"
         android:ems="10"
+        android:digits="ABCDEFGHJIKMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
         android:layout_marginHorizontal="16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fullname_name"
@@ -95,7 +96,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bank_account_no_name"
         android:gravity="top|start"
-        android:maxLength="8"
         android:inputType="number"
         android:padding="10dp"
         android:textSize="16sp"
@@ -124,7 +124,7 @@
         app:layout_constraintTop_toBottomOf="@+id/education_name">
 
         <Spinner
-            android:id="@+id/spGender"
+            android:id="@+id/spEducation"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@null"
@@ -193,7 +193,8 @@
         android:layout_height="48dp"
         android:layout_marginTop="80dp"
         android:layout_marginHorizontal="48dp"
-        android:background="@drawable/bg_btn_default"
+        android:background="@drawable/selector_button"
+        android:enabled="false"
         android:foreground="?android:attr/selectableItemBackgroundBorderless"
         android:paddingHorizontal="64dp"
         android:text="@string/save"

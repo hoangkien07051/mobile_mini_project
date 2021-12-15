@@ -12,4 +12,6 @@
     <string name="domicile_address">Domicile Address</string>
     <string name="housing_type">Housing Type</string>
     <string name="no">No</string>
+    <string name="province">Province</string>
+    <string name="network_error">Network Error</string>
 </resources>

@@ -19,10 +19,7 @@ import com.vmo.mobileminiproject.utils.Utils
 import com.vmo.mobileminiproject.utils.hideKeyboard
 import com.vmo.mobileminiproject.utils.toDefaultDateString
 import com.vmo.mobileminiproject.viewmodel.DiriViewModel
-import kotlinx.android.synthetic.main.fragment_alamat.*
 import kotlinx.android.synthetic.main.fragment_diri.*
-import kotlinx.android.synthetic.main.fragment_diri.btnSave
-import kotlinx.android.synthetic.main.fragment_diri.icon_back
 import java.util.*
 import javax.inject.Inject
 

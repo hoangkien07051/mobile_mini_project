@@ -59,22 +59,14 @@ class DataDiriFragment : Fragment(R.layout.fragment_diri) {
 
     private fun handleViewListener() {
         national_id.doAfterTextChanged {
-            if(it.toString().trim().length == 16) {
-                diriViewModel.isNationalId.postValue(true)
-            } else {
-                diriViewModel.isNationalId.postValue(false)
-            }
+            diriViewModel.isNationalId.postValue(it.toString().trim().length == 16)
         }
         fullname.doAfterTextChanged {
             diriViewModel.isFullname.postValue(it.toString().trim().isNotEmpty())
         }
         bank_account_no.doAfterTextChanged {
             val count = it.toString().trim().length
-            if(count <= 8) {
-                diriViewModel.isBankAccountNo.postValue(false)
-            } else {
-                diriViewModel.isBankAccountNo.postValue(true)
-            }
+            diriViewModel.isBankAccountNo.postValue(count > 8)
         }
 
         spEducation.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {

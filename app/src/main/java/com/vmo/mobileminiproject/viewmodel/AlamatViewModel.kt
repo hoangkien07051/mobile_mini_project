@@ -34,7 +34,7 @@ class AlamatViewModel(): ViewModel()  {
         }
     }
 
-    private fun enableSave(): Boolean {
+    fun enableSave(): Boolean {
         return isDomicileAddress.value == true &&
                 isHousingType.value == true &&
                 isNo.value == true &&

@@ -34,7 +34,7 @@ class DiriViewModel @Inject constructor() : ViewModel() {
         }
     }
 
-    private fun enableSave(): Boolean {
+    fun enableSave(): Boolean {
         return isNationalId.value == true &&
                 isFullname.value == true &&
                 isBankAccountNo.value == true &&
